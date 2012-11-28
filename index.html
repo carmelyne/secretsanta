@@ -30,7 +30,7 @@
     <div id="wrap">
 
       <div class="container">
-
+      <a name="top"></a>
         <div class="page-header">
 
               <div class="gplus-button">
@@ -53,9 +53,9 @@
             <li><a href="#participate">How to participate</a></li>
           </ul>
         </div>
-
         <div class="main-content">
-
+        <div id="wish_list_container" class="row-fluid"></div>
+        <hr class="soften">
         <div class="featurette">
         <a name="what"></a>
         <h2 class="featurette-heading"><span class="muted">What is</span> +Secret Santa</h2>
@@ -76,17 +76,17 @@
         <div class="featurette">
         <h2 class="featurette-heading"><span class="muted">How</span> to participate</h2>
         <p class="lead">Tis the season for giving! Here is where Google+ comes together here to give and receive from Amazon Wishlists. It's simple!</p>
-        <p>*How to*</p>
+        <p><strong>How to</strong></p>
         <a name="participate"></a>
-        <ul>
-          <li>Create an Amazon Wishlist in your country's Amazon store</li>
-          <li>Add your list by filling out this form!</li>
-          <li>Share your list with #GPlusSanta</li>
+        <ul class="how-to">
+          <li><a href="http://www.amazon.com/gp/registry/wishlist" target="_blank" class="btn btn-info btn-mini">Create an Amazon Wishlist</a> in your country's Amazon store</li>
+          <li><a href="https://docs.google.com/spreadsheet/viewform?formkey=dFpBeThYVDVRUndxXzExUEVVTExiNVE6MQ#gid=0" target="_blank" class="btn btn-info btn-mini">Add your list by filling out this form!</a></li>
+          <li>Share your list with <a href="https://plus.google.com/u/0/s/%23GPlusSanta" target="_blank" class="btn btn-info btn-mini">#GPlusSanta</a></li>
           <li>Give, receive, repeat!</li>
         </ul>
         <p>Secret Santa and his elves will use the master list to share lists every day to make sure you have the best holiday season possible!</p>
         <p>When you receive a gift, don't forget to post a picture with the hashtags #SantaGift and #GPlusSanta.</p>
-        <p>This years elves are Kyla Myers, Sean Cowen, LaDonna Pride, and Rae Ouzts. Secret Santa is managed and was created by Carter Gibson.</p>
+        <p>This years elves are <a href="https://plus.google.com/113896907556049130248/posts" class="btn btn-danger btn-mini" target="_blank">+Kyla Myers</a>, <a href="https://plus.google.com/103333429938529668020/posts" class="btn btn-danger btn-mini" target="_blank">+Sean Cowen</a>, <a href="https://plus.google.com/106539835304510344813/posts" class="btn btn-danger btn-mini" target="_blank">+LaDonna Pride</a>, and <a href="https://plus.google.com/111283416647206388433/posts" class="btn btn-danger btn-mini" target="_blank">+Rae Ouzts</a>. Secret Santa is managed and was created by <a href="https://plus.google.com/+CarterGibson/posts" class="btn btn-danger btn-mini" target="_blank">+Carter Gibson</a>.</p>
         </div>
 
         </div><!-- /main-content -->
@@ -96,7 +96,7 @@
     
     <div id="footer">
       <div class="container">
-        <p class="credit">&copy; 2012 +Secret Santa</p>
+        <p class="credit">&copy; 2012 <a href="/">+Secret Santa</a>. All rights reserved. <a href="https://plus.google.com/u/0/113269791493257695508/" title="Secret Santa" target="_blank">Visit us on Google+</a> <a name="participate" href="#top" class="pull-right">Back to top</a></p>
       </div>
     </div>
 
@@ -119,6 +119,8 @@
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
     <script src="assets/js/smooth.pack.js"></script>
-
+    <script src="assets/js/jquery.masonry.min.js"></script>
+    <script src="assets/js/secret-santa-data.js"></script>
+    <script src="http://spreadsheets.google.com/feeds/list/0Aj0U1tBm3fnEdFpBeThYVDVRUndxXzExUEVVTExiNVE/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
   </body>
 </html>
