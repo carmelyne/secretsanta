@@ -26,4 +26,4 @@ This years elves are:
 * [LaDonna Pride](https://plus.google.com/106539835304510344813/posts)
 * [Rae Ouzts](https://plus.google.com/111283416647206388433/posts)
 
-Secret Santa is managed and was created by Carter Gibson](https://plus.google.com/+CarterGibson/posts).
+Secret Santa is managed and was created by [Carter Gibson](https://plus.google.com/+CarterGibson/posts).
