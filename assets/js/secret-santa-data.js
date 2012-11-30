@@ -11,10 +11,22 @@ function displayContent(json) {
     var len = json.feed.entry.length
 
     for (var i=0; i<len; i++) {
-        wish_list_html += [
+
+        var link = json.feed.entry[i].gsx$googleplusprofilelink.$t;
+        var profileId = null;
+       if (link) {
+           var result = /(\d{4,})/.exec(link);
+          if (result) {
+ 	         profileId = result[0]
+            }
+      } else {
+	profileId="113269791493257695508";
+}
+
+wish_list_html += [
             '<div class="gift-box">',
             '<p class="gift-box-header">',
-            '<i class="icon-gift icon-white"></i> ',
+            '<i class="icon-gift icon-white ss"></i> ',
             '<a target="_blank" class="" title="Wish List" href="',
             json.feed.entry[i].gsx$amazonwishlist.$t, 
             '">',
@@ -25,7 +37,7 @@ function displayContent(json) {
             json.feed.entry[i].gsx$googleplusprofilelink.$t, 
             '">', 
             json.feed.entry[i].gsx$name.$t,
-            '</a><p>',
+            '</a> <img class="profilepic" src="https://plus.google.com/s2/photos/profile/',profileId,'?sz=50"></img><p>',
             '<p class="thoughts">',
             json.feed.entry[i].gsx$whyisitimportanttoyouthatsecretsantahelpsoutthisyear.$t,
             '<p>',
