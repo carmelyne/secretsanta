@@ -14,7 +14,7 @@ function displayContent(json) {
         wish_list_html += [
             '<div class="gift-box">',
             '<p class="gift-box-header">',
-            '<i class="icon-gift icon-white ss"></i> ',
+            '<i class="icon-gift icon-white"></i> ',
             '<a target="_blank" class="" title="Wish List" href="',
             json.feed.entry[i].gsx$amazonwishlist.$t, 
             '">',
