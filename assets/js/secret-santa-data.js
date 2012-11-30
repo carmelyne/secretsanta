@@ -1,8 +1,12 @@
 $(function(){
-  $('#wish_list_container').masonry({
-    itemSelector : '.gift-box',
-    columnWidth : 240
-  });
+  var $container = $('#wish_list_container');
+  $container.imagesLoaded(function(){
+    $container.masonry({
+      itemSelector : '.gift-box',
+      columnWidth : 240
+    });
+  });  
+  
 });
 
 function displayContent(json) {
@@ -31,13 +35,14 @@ wish_list_html += [
             json.feed.entry[i].gsx$amazonwishlist.$t, 
             '">',
             'View Wishlist</a><p>',
-            '<p><a class="user" target="_blank" title="',
-            json.feed.entry[i].gsx$name.$t,,
+            '<img class="profilepic" src="https://plus.google.com/s2/photos/profile/',profileId,'?sz=50"></img></li>',
+            '<a class="user" target="_blank" title="',
+            json.feed.entry[i].gsx$name.$t,
             '" href="', 
             json.feed.entry[i].gsx$googleplusprofilelink.$t, 
             '">', 
             json.feed.entry[i].gsx$name.$t,
-            '</a> <img class="profilepic" src="https://plus.google.com/s2/photos/profile/',profileId,'?sz=50"></img><p>',
+            '</a>',
             '<p class="thoughts">',
             json.feed.entry[i].gsx$whyisitimportanttoyouthatsecretsantahelpsoutthisyear.$t,
             '<p>',
