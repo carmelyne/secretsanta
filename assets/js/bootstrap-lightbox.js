@@ -314,11 +314,12 @@
 
 	$.fn.lightbox.Constructor = Lightbox;
 
+}(window.jQuery);
 
 /* LIGHTBOX DATA-API
  * ================== */
-
-	$(document).on('click.lightbox.data-api', '[data-toggle="lightbox"]', function (e)
+//hack to get button to work in our specific case
+	$("#add_your_list_btn").click(function (e)
 	{
 		var $this = $(this);
 		var href  = $this.attr('href');
@@ -349,6 +350,4 @@
 					img = undefined;
 				}
 			});
-	})
-
-}(window.jQuery);
+	});
