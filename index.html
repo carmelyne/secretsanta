@@ -11,6 +11,7 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/secret-santa.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-lightbox.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -54,6 +55,9 @@
           </ul>
         </div>
         <div class="main-content">
+		<div id="add_your_list_row" class="row-fluid pagination-centered">
+			<a data-toggle="lightbox" href="#add_your_list_lightbox" class="btn btn-danger btn-large">Add your list</a>
+		</div>
         <div id="wish_list_container" class="row-fluid"></div>
         <hr class="soften">
         <div class="featurette">
@@ -104,6 +108,17 @@
         <div id="push"></div>
     </div><!-- /end container -->
     
+	<!-- lightbox with form to add lists -->
+	<div id="add_your_list_lightbox" class="lightbox"  tabindex="-1" role="dialog" aria-hidden="true" style="display:none;">
+		<div class='lightbox-header'>
+			<button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button>
+		</div>
+		<div class='lightbox-content'>
+			<iframe frameborder="0" src="http://goo.gl/1qd9g" width="640" height="480"></iframe>
+		</div>
+	</div>
+	<!-- /end lightbox -->
+	
     <div id="footer">
       <div class="container">
         <p class="credit">&copy; 2012 <a href="/">+Secret Santa</a>. All rights reserved. <a href="https://plus.google.com/u/0/113269791493257695508/" title="Secret Santa" target="_blank" rel="publisher">Visit us on Google+</a> | <a href="https://github.com/carmelyne/secretsanta" target="_blank">+Secret Santa on Github</a> <a name="bottom" href="#top" class="pull-right">Back to top</a></p>
@@ -115,7 +130,7 @@
 
     <!-- javascript
     ================================================== -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
@@ -128,12 +143,13 @@
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
+	<script src="assets/js/bootstrap-lightbox.js"></script>
     <script src="assets/js/smooth.pack.js"></script>
     <script src="assets/js/jquery.masonry.min.js"></script>
     <script src="assets/js/secret-santa-data.js"></script>
     <script src="http://spreadsheets.google.com/feeds/list/0Aj0U1tBm3fnEdFpBeThYVDVRUndxXzExUEVVTExiNVE/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
     <script type="text/javascript">
-
+	
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-36722933-1']);
       _gaq.push(['_setDomainName', 'gplussanta.com']);
@@ -145,6 +161,7 @@
         ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+	  
 
   </script>
   </body>
