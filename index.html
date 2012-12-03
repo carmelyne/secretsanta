@@ -53,8 +53,19 @@
             <li><a href="#participate">How to participate</a></li>
           </ul>
         </div>
-        <div class="main-content">
+    <div class="main-content">
+        <section id="options" class="clearfix">
+
+            <ul id="sort-by" class="option-set clearfix sort-nav" data-option-key="sortBy">
+              <li>Sort wishlists by:</li>
+              <li><a href="#sortBy=name" data-option-value="name" class="">Name</a></li>
+              <li>//</li>
+              <li><a href="#sortBy=random" data-option-value="random" class="">Random</a></li>
+            </ul>
+
+        </section>
         <div id="wish_list_container" class="row-fluid"></div>
+
         <hr class="soften">
         <div class="featurette">
         <a name="what"></a>
@@ -129,9 +140,9 @@
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
     <script src="assets/js/smooth.pack.js"></script>
-    <script src="assets/js/jquery.masonry.min.js"></script>
+    <script src="assets/js/jquery.isotope.js"></script>
     <script src="assets/js/secret-santa-data.js"></script>
-    <script src="http://spreadsheets.google.com/feeds/list/0Aj0U1tBm3fnEdFpBeThYVDVRUndxXzExUEVVTExiNVE/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
+    <script src="http://spreadsheets.google.com/feeds/list/0Aj0U1tBm3fnEdFpBeThYVDVRUndxXzExUEVVTExiNVE/od6/public/values?alt=json-in-script&amp;callback=displayContent&amp;reverse=true" type="text/javascript"></script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
