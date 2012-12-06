@@ -2,131 +2,217 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>+Secret Santa</title>
+    <title>+Secret Santa on Google+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- CSS -->
+    <!-- Le styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="assets/css/secret-santa.css" rel="stylesheet">
+    <link href="assets/css/ss.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Fav and touch icons #TODO Carm-->
+    <!-- Fav and touch icons -->
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
   </head>
 
   <body>
-
-    <div id="wrap">
-
-      <div class="container">
-      <a name="top"></a>
-        <div class="page-header">
-
-              <div class="gplus-button">
-                <!-- Place this tag where you want the +1 button to render. -->
-                <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-                
-                <!-- Place this tag after the last +1 button tag. -->
-                <script type="text/javascript">
-                  (function() {
-                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                    po.src = 'https://apis.google.com/js/plusone.js';
-                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                  })();
-                </script>
-              </div>
-
-          <ul class="ss-nav">
-            <li><a href="#what">What is +Secret Santa</a></li>
-            <li><a href="#how">How it all started</a></li>
-            <li><a href="#participate">How to participate</a></li>
-          </ul>
-        </div>
-    <div class="main-content">
-        <section id="options" class="clearfix">
-
-            <ul id="sort-by" class="option-set clearfix sort-nav" data-option-key="sortBy">
-              <li>Sort wishlists by:</li>
-              <li><a href="#sortBy=name" data-option-value="name" class="">Name</a></li>
-              <li>//</li>
-              <li><a href="#sortBy=random" data-option-value="random" class="">Random</a></li>
+    <a name="top"></a>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">+Secret Santa</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+            <li><a href="#view-lists">View Wishlists</a></li>
+            <li class="dropdown">
+                <a href="#what" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#what">What is +Secret Santa</a></li>
+                  <li><a href="#how">How it all started</a></li>
+                  <li><a href="#participate">How to participate</a></li>
+                  <li class="divider"></li>
+                  <li><a href="https://docs.google.com/spreadsheet/ccc?key=0Aj0U1tBm3fnEdFpBeThYVDVRUndxXzExUEVVTExiNVE#gid=0" target="_blank">View Spreadsheet version</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Secret Santa Helpers</li>
+                  <li><a href="#elves">Santa's Elves</a></li>
+                  <li><a href="https://github.com/carmelyne/secretsanta" target="_blank">Santa's Engineers</a></li>
+                </ul>
+              </li>
             </ul>
-
-        </section>
-        <div id="wish_list_container" class="row-fluid"></div>
-
-        <hr class="soften">
-        <div class="featurette">
-        <a name="what"></a>
-        <h2 class="featurette-heading"><span class="muted">What is</span> +Secret Santa</h2>
-        <p class="lead">Secret Santa is a display of community through anonymous gift giving. It's about brightening someone's day whether they can afford something or not, or giving someone a Christmas whose situation otherwise wouldn't allow one. It's display of empathy through gift giving and is emblematic of our responsibility to each other's happiness. Secret Santa isn't about the gifts - it's about the act of compassion.</p>
+            <div class="add-your-wishlist">
+              <div class="gplus-button">
+               <!-- Place this tag where you want the +1 button to render. -->
+               <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+                 <!-- Place this tag after the last +1 button tag. -->
+                 <script type="text/javascript">
+                   (function() {
+                     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                     po.src = 'https://apis.google.com/js/plusone.js';
+                     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                   })();
+                 </script>
+               </div>
+            </div>
+          </div><!--/.nav-collapse-->
         </div>
-
-        <div class="featurette">
-        <a name="how"></a>
-        <h2 class="featurette-heading">How it all <span class="muted">started</span></h2>
-        <p class="lead">Secret Santa  was started From humble beginnings. A few people who got to know each other on Google+ decided to organize a gift exchange between themselves but as they considered all the people they should include they realized it might be bigger than they thought. And so the Secret Santa page was born.</p>
-        </div>
-
-        <div class="featurette">
-        <h2 class="featurette-heading">+Secret Santa last <span class="muted">2011</span></h2>
-        <p class="lead">Last year Secret Santa collected over 1,000 wishlists, sent over a thousand gifts, and was followed by more than 5,000 people - all on Google+. There were countless stories of someone who donated money to charity, was able to give their children toys, or the community rallying behind a good soul and getting them a gift it they would have never asked for but deserved. </p>
-        </div>
-
-        <div class="featurette">
-        <h2 class="featurette-heading"><span class="muted">How</span> to participate</h2>
-        <p class="lead">Tis the season for giving! Here is where the Google+ community comes together --to give and receive via Amazon Wishlists during the holidays. It's simple!</p>
-        <p><strong>How to</strong></p>
-        <a name="participate"></a>
-        <ul class="how-to">
-          <li><a href="http://www.amazon.com/gp/registry/wishlist" target="_blank" class="btn btn-primary btn-mini">Create an Amazon Wishlist</a> in your country's Amazon store</li>
-          <li><a href="https://docs.google.com/spreadsheet/viewform?formkey=dFpBeThYVDVRUndxXzExUEVVTExiNVE6MQ#gid=0" target="_blank" class="btn btn-primary btn-mini">Add your list by filling out this form!</a></li>
-          <li>Share your list with <a href="https://plus.google.com/u/0/s/%23GPlusSanta" target="_blank" class="btn btn-primary btn-mini">#GPlusSanta</a></li>
-          <li>Give, receive, repeat!</li>
-        </ul>
-        <hr class="soften">
-        <p class="lead">Secret Santa and his elves will use the master list to share lists every day to make sure you have the best holiday season possible!</p>
-        <p class="lead">When you receive a gift, don't forget to post a picture with the hashtags #SantaGift and #GPlusSanta.</p>
-        <p>This years elves are:</p>
-        <ul class="elves">
-          <li><a href="https://plus.google.com/113896907556049130248/posts" class="btn btn-danger btn-mini" target="_blank">+Kyla Myers</a></li>
-          <li><a href="https://plus.google.com/103333429938529668020/posts" class="btn btn-danger btn-mini" target="_blank">+Sean Cowen</a></li>
-          <li><a href="https://plus.google.com/106539835304510344813/posts" class="btn btn-danger btn-mini" target="_blank">+LaDonna Pride</a></li>
-          <li><a href="https://plus.google.com/111283416647206388433/posts" class="btn btn-danger btn-mini" target="_blank">+Rae Ouzts</a></li>
-          <li><a href="https://plus.google.com/113881433443048137993/posts" class="btn btn-danger btn-mini" target="_blank">+Carmelyne Thompson</a></li>
-          <li><a href="https://plus.google.com/110503351402839446410/posts" class="btn btn-danger btn-mini" target="_blank">+Susan Tournour</a></li>
-          </ul>
-        <p>+Secret Santa is managed and was created by <a href="https://plus.google.com/+CarterGibson/posts" class="btn btn-danger btn-mini" target="_blank">+Carter Gibson</a>.</p>
-        </div>
-
-        </div><!-- /main-content -->
-
-        <div id="push"></div>
-    </div><!-- /end container -->
-    
-    <div id="footer">
-      <div class="container">
-        <p class="credit">&copy; 2012 <a href="/">+Secret Santa</a>. All rights reserved. <a href="https://plus.google.com/u/0/113269791493257695508/" title="Secret Santa" target="_blank" rel="publisher">Visit us on Google+</a> | <a href="https://github.com/carmelyne/secretsanta" target="_blank">+Secret Santa on Github</a> <a name="bottom" href="#top" class="pull-right">Back to top</a></p>
       </div>
     </div>
-
-  </div><!-- /end wrap -->
-
-
-    <!-- javascript
+    <!-- Carousel
     ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="assets/img/ss-carousel-1.png" alt="">
+          <div class="container">
+            <div class="carousel-caption pull-right">
+              <a class="btn btn-large btn-success visible-desktop" href="https://docs.google.com/spreadsheet/viewform?formkey=dFpBeThYVDVRUndxXzExUEVVTExiNVE6MQ#gid=0" target="_blank"><i class="icon-gift icon-white"></i> Add your wishlist</a>
+              <a class="btn btn-mini btn-success hidden-desktop" href="https://docs.google.com/spreadsheet/viewform?formkey=dFpBeThYVDVRUndxXzExUEVVTExiNVE6MQ#gid=0" target="_blank"><i class="icon-gift icon-white"></i> Add your wishlist</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/img/ss-carousel-2.png" alt="">
+          <div class="container">
+            <div class="carousel-caption pull-right">
+              <a class="btn btn-large btn-success visible-desktop" href="https://docs.google.com/spreadsheet/viewform?formkey=dFpBeThYVDVRUndxXzExUEVVTExiNVE6MQ#gid=0" target="_blank"><i class="icon-gift icon-white"></i> Add your wishlist</a>
+              <a class="btn btn-mini btn-success hidden-desktop" href="https://docs.google.com/spreadsheet/viewform?formkey=dFpBeThYVDVRUndxXzExUEVVTExiNVE6MQ#gid=0" target="_blank"><i class="icon-gift icon-white"></i> Add your wishlist</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/img/ss-carousel-3.png" alt="">
+          <div class="container">
+            <div class="carousel-caption pull-right">
+              <a class="btn btn-large btn-success visible-desktop" href="https://docs.google.com/spreadsheet/viewform?formkey=dFpBeThYVDVRUndxXzExUEVVTExiNVE6MQ#gid=0" target="_blank"><i class="icon-gift icon-white"></i> Add your wishlist</a>
+              <a class="btn btn-mini btn-success hidden-desktop" href="https://docs.google.com/spreadsheet/viewform?formkey=dFpBeThYVDVRUndxXzExUEVVTExiNVE6MQ#gid=0" target="_blank"><i class="icon-gift icon-white"></i> Add your wishlist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+    <div class="container">
+      <a name="view-lists"></a>
+      <hr class="featurette-divider">
+      <section id="options" class="clearfix">
+
+          <ul id="sort-by" class="option-set clearfix sort-nav" data-option-key="sortBy">
+            <li>Sort wishlists by:</li>
+            <li><a href="#sortBy=name" data-option-value="name" class="">Name</a></li>
+            <li>//</li>
+            <li><a href="#sortBy=random" data-option-value="random" class="">Random</a></li>
+          </ul>
+
+      </section>
+      <div id="wish_list_container" class="row-fluid"></div>
+    </div>
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <div class="container marketing">
+
+      <!-- START THE FEATURETTES -->
+
+      <a name="what"></a>
+      <hr class="featurette-divider">
+      <div class="featurette">
+      <h2 class="featurette-heading"><span class="muted">What is</span> +Secret Santa</h2>
+      <p class="lead">Secret Santa is a display of community through anonymous gift giving. It's about brightening someone's day whether they can afford something or not, or giving someone a Christmas whose situation otherwise wouldn't allow one. It's display of empathy through gift giving and is emblematic of our responsibility to each other's happiness. Secret Santa isn't about the gifts - it's about the act of compassion.</p>
+      </div>
+
+      <a name="how"></a>
+      <hr class="featurette-divider">
+      <div class="featurette">
+      <h2 class="featurette-heading">How it all <span class="muted">started</span></h2>
+      <p class="lead">Secret Santa  was started From humble beginnings. A few people who got to know each other on Google+ decided to organize a gift exchange between themselves but as they considered all the people they should include they realized it might be bigger than they thought. And so the Secret Santa page was born.</p>
+      </div>
+
+      <div class="featurette">
+      <h2 class="featurette-heading">+Secret Santa last <span class="muted">2011</span></h2>
+      <p class="lead">Last year Secret Santa collected over 1,000 wishlists, sent over a thousand gifts, and was followed by more than 5,000 people - all on Google+. There were countless stories of someone who donated money to charity, was able to give their children toys, or the community rallying behind a good soul and getting them a gift it they would have never asked for but deserved. </p>
+      </div>
+
+      <a name="participate"></a>
+      <hr class="featurette-divider">
+      <div class="featurette">
+      <h2 class="featurette-heading"><span class="muted">How</span> to participate</h2>
+      <p class="lead">Tis the season for giving! Here is where the Google+ community comes together --to give and receive via Amazon Wishlists during the holidays. It's simple!</p>
+      <p><strong>How to</strong></p>
+
+      <ul class="how-to">
+        <li><a href="http://www.amazon.com/gp/registry/wishlist" target="_blank" class="btn btn-primary btn-mini">Create an Amazon Wishlist</a> in your country's Amazon store</li>
+        <li><a href="https://docs.google.com/spreadsheet/viewform?formkey=dFpBeThYVDVRUndxXzExUEVVTExiNVE6MQ#gid=0" target="_blank" class="btn btn-primary btn-mini">Add your list by filling out this form!</a></li>
+        <li>Share your list with <a href="https://plus.google.com/u/0/s/%23GPlusSanta" target="_blank" class="btn btn-primary btn-mini">#GPlusSanta</a></li>
+        <li>Give, receive, repeat!</li>
+      </ul>
+      </div>
+
+      <a name="elves"></a>
+      <hr class="featurette-divider">
+      <div class="featurette">
+      <h2 class="featurette-heading"><span class="muted">Santa's</span> Elves</h2>
+      <p class="lead">Secret Santa and his elves will use the master list to share lists every day to make sure you have the best holiday season possible!</p>
+      <p class="lead">When you receive a gift, don't forget to post a picture with the hashtags #SantaGift and #GPlusSanta.</p>
+      <p>2012 elves:</p>
+      <ul class="elves">
+        <li><a href="https://plus.google.com/113896907556049130248/posts" class="btn btn-danger btn-mini" target="_blank">+Kyla Myers</a></li>
+        <li><a href="https://plus.google.com/103333429938529668020/posts" class="btn btn-danger btn-mini" target="_blank">+Sean Cowen</a></li>
+        <li><a href="https://plus.google.com/106539835304510344813/posts" class="btn btn-danger btn-mini" target="_blank">+LaDonna Pride</a></li>
+        <li><a href="https://plus.google.com/111283416647206388433/posts" class="btn btn-danger btn-mini" target="_blank">+Rae Ouzts</a></li>
+        <li><a href="https://plus.google.com/113881433443048137993/posts" class="btn btn-danger btn-mini" target="_blank">+Carmelyne Thompson</a></li>
+        <li><a href="https://plus.google.com/110503351402839446410/posts" class="btn btn-danger btn-mini" target="_blank">+Susan Tournour</a></li>
+        </ul>
+      <p>+Secret Santa is managed and was created by <a href="https://plus.google.com/+CarterGibson/posts" class="btn btn-danger btn-mini" target="_blank">+Carter Gibson</a>.</p>
+      </div>
+
+      <a name="collaborate"></a>
+      <hr class="featurette-divider">
+      <div class="featurette">
+      <h2 class="featurette-heading"><span class="muted">Santa's</span> Engineers</h2>
+      <p class="lead">If you're a developer, we'd love your help with the site. You can see a list of requested features here: <a href="http://goo.gl/QozT8" target="_blank">http://goo.gl/QozT8</a></p>
+      <p class="lead">Follow us on <a href="https://github.com/carmelyne/secretsanta" target="_blank">Github</a> or report a <a href="https://github.com/carmelyne/secretsanta/issues" target="_blank">bug</a>.</p>
+      <p>2012 code contributors:</p>
+      <ul class="elves">
+        <li><a href="https://plus.google.com/113881433443048137993/posts" class="btn btn-danger btn-mini" target="_blank">+Carmelyne Thompson</a></li>
+        <li><a href="https://plus.google.com/u/0/114228869493885222559/posts" class="btn btn-danger btn-mini" target="_blank">+Liz Quilty</a></li>
+      </ul>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#top">Back to top</a></p>
+        <p>&copy; +Secret Santa &middot; <a href="https://plus.google.com/u/0/113269791493257695508/" title="Secret Santa" target="_blank" rel="publisher">Visit us on Google+</a> &middot; <a href="https://github.com/carmelyne/secretsanta" target="_blank">+Secret Santa on Github</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
@@ -141,8 +227,17 @@
     <script src="assets/js/bootstrap-typeahead.js"></script>
     <script src="assets/js/smooth.pack.js"></script>
     <script src="assets/js/jquery.isotope.js"></script>
-    <script src="assets/js/secret-santa-data.js"></script>
-    <script src="http://spreadsheets.google.com/feeds/list/0Aj0U1tBm3fnEdFpBeThYVDVRUndxXzExUEVVTExiNVE/od6/public/values?alt=json-in-script&amp;callback=displayContent&amp;reverse=true" type="text/javascript"></script>
+    <script src="assets/js/ss.js"></script>
+    <script src="https://spreadsheets.google.com/feeds/list/0Aj0U1tBm3fnEdFdUZ0VqY3Z4UGEzWGNEV2Z5MUxHOWc/od6/public/values?alt=json-in-script&gid=0&amp;callback=displayFeatured" type="text/javascript"></script>
+    <script src="http://spreadsheets.google.com/feeds/list/0Aj0U1tBm3fnEdFpBeThYVDVRUndxXzExUEVVTExiNVE/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -150,13 +245,12 @@
       _gaq.push(['_setDomainName', 'gplussanta.com']);
       _gaq.push(['_setAllowLinker', true]);
       _gaq.push(['_trackPageview']);
-    
+
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
-  </script>
+    </script>
   </body>
 </html>
