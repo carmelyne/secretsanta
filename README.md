@@ -33,7 +33,7 @@ Secret Santa and his elves will use the master list to share lists every day to 
 When you receive a gift, don't forget to post a picture with the hashtags #SantaGift and #GPlusSanta.
 
 
-This years elves are: 
+2012 Elves: 
 * [Kyla Myers](https://plus.google.com/113896907556049130248/posts)
 * [Sean Cowen](https://plus.google.com/103333429938529668020/posts)
 * [LaDonna Pride](https://plus.google.com/106539835304510344813/posts)
