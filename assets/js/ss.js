@@ -86,7 +86,9 @@ function displayContent(json) {
       '<a target="_blank" class="" title="Wish List" href="',
       json.feed.entry[i].gsx$amazonwishlist.$t,
       '">',
-      'View Wishlist</a><p>',
+      'View Wishlist</a>',
+      getGiftStatus(json.feed.entry[i]),
+      '<p>',
       '<img class="profilepic" src="https://plus.google.com/s2/photos/profile/',profileId,'?sz=50"></img></li>',
       '<a class="user name" target="_blank" title="',
       json.feed.entry[i].gsx$name.$t,
@@ -132,7 +134,9 @@ function displayFeatured(json) {
       '<a target="_blank" class="" title="Wish List" href="',
       json.feed.entry[i].gsx$amazonwishlist.$t,
       '">',
-      'View Wishlist</a><p>',
+      'View Wishlist</a>',
+      getGiftStatus(json.feed.entry[i]),
+      '<p>',
       '<img class="profilepic" src="https://plus.google.com/s2/photos/profile/',profileId,'?sz=50"></img></li>',
       '<a class="user name" target="_blank" title="',
       json.feed.entry[i].gsx$name.$t,
@@ -150,4 +154,18 @@ function displayFeatured(json) {
 
     document.getElementById('featured_list_html').innerHTML = featured_list_html
 
+}
+
+function getGiftStatus(entry) {
+    var iconString = '<span class="pull-right">';
+
+    if ( entry.gsx$gaveagift.$t.length > 0 ) { // they were marked as having gave a gift in the spreadsheet
+	    iconString += '<img src="./assets/img/ss-ico.png" title="gave a gift!" /> ';
+    }
+
+    if ( entry.gsx$giftreceivedorgiftincoming.$t.length > 0 ) { // they were marked as having received a gift
+	    iconString += '<img src="./assets/img/present.png" title="got a gift!" /> ';
+    }
+
+    return iconString + '</span>';
 }
