@@ -86,7 +86,7 @@ function displayContent(json) {
       '<a target="_blank" class="" title="Wish List" href="',
       json.feed.entry[i].gsx$amazonwishlist.$t,
       '">',
-      'View Wishlist</a><p>',
+      'View Wishlist</a>&nbsp;',json.feed.entry[i].gsx$gaveagift.$t,'<p>',
       '<img class="profilepic" src="https://plus.google.com/s2/photos/profile/',profileId,'?sz=50"></img></li>',
       '<a class="user name" target="_blank" title="',
       json.feed.entry[i].gsx$name.$t,
