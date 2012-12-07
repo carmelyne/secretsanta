@@ -41,5 +41,6 @@ When you receive a gift, don't forget to post a picture with the hashtags #Santa
 * [Rae Ouzts](https://plus.google.com/111283416647206388433/posts)
 * [Carmelyne Thompson](https://plus.google.com/u/0/113881433443048137993/posts)
 * [Susan Tournour](https://plus.google.com/110503351402839446410/posts)
+* [Lori Friedrich](https://plus.google.com/105119763784866168573/posts)
 
 Secret Santa is managed and was created by [Carter Gibson](https://plus.google.com/+CarterGibson/posts).
