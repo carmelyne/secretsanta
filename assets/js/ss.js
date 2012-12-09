@@ -1,6 +1,10 @@
 $(function(){
-  $('.carousel').carousel();
-  
+
+  $('.carousel').carousel({
+    interval: 8000,
+    pause: "hover"
+  });
+
   var $container = $('#wish_list_container');
 
   $container.imagesLoaded(function(){

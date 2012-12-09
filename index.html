@@ -211,7 +211,6 @@
 
       <!-- /END THE FEATURETTES -->
 
-
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#top">Back to top</a></p>
@@ -248,17 +247,16 @@
     <script>
       !function ($) {
         $(function(){
-          // carousel demo
-	  $('#myCarousel').carousel();
 
-	  $('#listSearch').contentsearch({
-		 'targetContainer'  : '#wish_list_container',
-		 'searchExpression' : 'a[class="user name"]:contains("#query#")'
-	  });
-	  
+          $('#listSearch').contentsearch({
+           'targetContainer'  : '#wish_list_container',
+           'searchExpression' : 'a[class="user name"]:contains("#query#")'
+          });
+
         })
       }(window.jQuery)
     </script>
+
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -272,6 +270,8 @@
         ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+
     </script>
+
   </body>
 </html>
