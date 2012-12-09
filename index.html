@@ -51,6 +51,9 @@
                 </ul>
               </li>
             </ul>
+            <div class="pull-right" style="padding-top:10px;">
+              <input type="text" id="listSearch" placeholder="Search"/>
+            </div>
             <div class="add-your-wishlist">
               <div class="gplus-button">
                <!-- Place this tag where you want the +1 button to render. -->
@@ -221,7 +224,7 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
@@ -236,6 +239,8 @@
     <script src="assets/js/bootstrap-typeahead.js"></script>
     <script src="assets/js/smooth.pack.js"></script>
     <script src="assets/js/jquery.isotope.js"></script>
+    <script src="assets/js/jquery.scrollTo-min.js"></script>
+    <script src="assets/js/jquery.contentsearch.js"></script>
     <script src="assets/js/ss.js"></script>
     <script src="https://spreadsheets.google.com/feeds/list/0Aj0U1tBm3fnEdFdUZ0VqY3Z4UGEzWGNEV2Z5MUxHOWc/od6/public/values?alt=json-in-script&gid=0&amp;callback=displayFeatured" type="text/javascript"></script>
     <script src="http://spreadsheets.google.com/feeds/list/0Aj0U1tBm3fnEdFpBeThYVDVRUndxXzExUEVVTExiNVE/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
@@ -243,7 +248,13 @@
       !function ($) {
         $(function(){
           // carousel demo
-          $('#myCarousel').carousel()
+	  $('#myCarousel').carousel();
+
+	  $('#listSearch').contentsearch({
+		 'targetContainer'  : '#wish_list_container',
+		 'searchExpression' : 'a[class="user name"]:contains("#query#")'
+	  });
+	  
         })
       }(window.jQuery)
     </script>
