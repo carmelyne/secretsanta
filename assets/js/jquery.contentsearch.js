@@ -39,7 +39,7 @@
 
         var query = $(this).val();
 
-        if ( query.length > 2 ) { 
+        if ( query.length > 1 ) { 
 
                     
           if ( priorQuery.length > 0 ) {
