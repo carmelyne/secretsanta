@@ -7,7 +7,7 @@ Contributors:
 
 * [Carmelyne Thompson](https://plus.google.com/u/0/113881433443048137993/posts)
 * [Liz Quilty](https://plus.google.com/u/0/114228869493885222559/posts)
-* [Ravi Hardeep Nath](https://github.com/RaviN)
+* [Ravi Nath](https://plus.google.com/u/0/102622246738271995921/posts)
 
 
 ---------------------------
