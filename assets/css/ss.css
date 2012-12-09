@@ -206,9 +206,7 @@ nav {background: #000;width: 100%;}
 .number { display: none;}
 
 #wish_list_container {margin: 0 auto;}
-.sort-nav {margin: 0 5px;}
-.sort-nav li {display: inline; list-style: none;}
-.sort-nav li a.selected {font-weight: bold;text-decoration: underline;}
+.sort-nav {margin: 0 0 0 -20px;}
 
 footer a:hover { color: #fff !important;}
 
@@ -302,5 +300,5 @@ footer a:hover { color: #fff !important;}
 
 @media (min-width: 1280px) {
   #wish_list_container {margin: 0 115px;}
-  .sort-nav {margin: 0 120px;}
+  .sort-nav {margin: 0 95px;}
 }

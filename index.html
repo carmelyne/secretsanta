@@ -121,14 +121,20 @@
       <a name="view-lists"></a>
       <hr class="featurette-divider">
       <section id="options" class="clearfix">
-
-          <ul id="sort-by" class="option-set clearfix sort-nav" data-option-key="sortBy">
-            <li>Sort wishlists by:</li>
-            <li><a href="#sortBy=name" data-option-value="name" class="">Name</a></li>
-            <li>//</li>
-            <li><a href="#sortBy=random" data-option-value="random" class="">Random</a></li>
+        <div class="btn-toolbar sort-nav">
+          <ul id="sort-by" class="option-set clearfix btn-group" data-option-key="sortBy">
+            <li class="btn">Sort by:</li>
+            <li class="btn"><a href="#sortBy=name" data-option-value="name" class="">Name</a></li>
+            <li class="btn"><a href="#sortBy=random" data-option-value="random" class="selected">Random</a></li>
           </ul>
-
+          <ul id="filters" class="option-set clearfix btn-group" data-option-key="filter">
+            <li class="btn">Filter by:</li>
+            <li class="btn"><a href="#filter" data-option-value="*" class="">Show All</a></li>
+            <li class="btn"><a href="#filter" data-option-value=".santa">Sent a Gift</a></li>
+            <li class="btn"><a href="#filter" data-option-value=".recipient">Recieved a Gift</a></li>
+            <li class="btn"><a href="#" data-filter=":not(.recipient)">Needs a Gift</a></li>
+          </ul>
+        </div><!-- /.btn-toolbar -->
       </section>
       <div id="wish_list_container" class="row-fluid"></div>
     </div>
@@ -241,7 +247,7 @@
     <script src="assets/js/jquery.isotope.js"></script>
     <script src="assets/js/jquery.scrollTo-min.js"></script>
     <script src="assets/js/jquery.contentsearch.js"></script>
-    <script src="assets/js/ss.js"></script>
+    <script src="assets/js/ss2.js"></script>
     <script src="https://spreadsheets.google.com/feeds/list/0Aj0U1tBm3fnEdFdUZ0VqY3Z4UGEzWGNEV2Z5MUxHOWc/od6/public/values?alt=json-in-script&gid=0&amp;callback=displayFeatured" type="text/javascript"></script>
     <script src="http://spreadsheets.google.com/feeds/list/0Aj0U1tBm3fnEdFpBeThYVDVRUndxXzExUEVVTExiNVE/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
     <script>
