@@ -206,7 +206,25 @@ nav {background: #000;width: 100%;}
 .number { display: none;}
 
 #wish_list_container {margin: 0 auto;}
-.sort-nav {margin: 0 0 0 -20px;}
+.sort-nav {margin: 0 0 0 -20px; font-size: 12px;}
+
+.btn a.selected {font-weight: bold; color: #666;}
+.btn a:hover {text-decoration: none;color: #08C;}
+
+footer {
+  padding: 15px 0;
+  width: 100%;
+  color: white;
+  font-size: 13px;
+  background: #0e4691;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+  box-shadow: 0 -1px 4px 2px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+footer p { margin: 0 !important;}
 
 footer a:hover { color: #fff !important;}
 
