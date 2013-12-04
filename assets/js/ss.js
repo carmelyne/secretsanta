@@ -176,8 +176,12 @@ function getGiftStatus(entry) {
       iconString += '<img src="./assets/img/ss-ico.png" title="gave a gift!" /> ';
     }
 
-    if ( entry.gsx$giftreceivedorgiftincoming.$t.length > 0 ) { // they were marked as having received a gift
+    if ( entry.gsx$giftreceivedorgiftincoming.$t == "Received" ) { // they were marked as having received a gift
       iconString += '<img src="./assets/img/present.png" class="recipient" title="got a gift!" /> ';
+    }
+
+    if ( entry.gsx$giftreceivedorgiftincoming.$t == "Incoming" ) { // they were marked as having an incoming gift
+      iconString += '<img src="./assets/img/present-incoming.png" class="recipient" title="incoming gift!" /> ';
     }
 
     return iconString + '</span>';
