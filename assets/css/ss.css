@@ -205,6 +205,8 @@ nav {background: #000;width: 100%;}
 
 .number { display: none;}
 
+.no-address img { margin-top: -3px;}
+
 #wish_list_container {margin: 0 auto;}
 .sort-nav {margin: 0 0 0 -20px; font-size: 12px;}
 
