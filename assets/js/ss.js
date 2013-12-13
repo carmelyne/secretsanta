@@ -1,5 +1,13 @@
 $(function(){
 
+// Just get some rough data
+  var wishLists = $("#wish_list_container").children().length + 1;
+    console.log("number of wish lists:" + wishLists);
+  var receivedGifts = $(".recipient").length + 1;
+    console.log("Received Gifts:" + receivedGifts);
+  var sentGifts = $(".santa").length + 1;
+    console.log("Sent Gifts:" + sentGifts);
+
   $('.carousel').carousel({
     interval: 8000,
     pause: "hover"
@@ -95,6 +103,8 @@ function displayContent(json) {
       '<div class="gift-box',
       getSanta(json.feed.entry[i]),
       getRecipient(json.feed.entry[i]),
+      getBadAmazon(json.feed.entry[i]),
+      getMissingAddress(json.feed.entry[i]),
       '">',
       '<p class="gift-box-header">',
       '<i class="icon-gift icon-white"><span class="number">',profileId,'</span></i> ',
@@ -172,4 +182,22 @@ function getSanta(entry) {
       addedSanta = " santa";
     }
     return addedSanta;
+}
+
+function getBadAmazon(entry) {
+    var addedBadAmazon;
+
+    if ( entry.gsx$incorrectamazonpermalink.$t == "Bad Link" ) {
+      addedBadAmazon = " bad-link";
+    }
+    return addedBadAmazon;
+}
+
+function getMissingAddress(entry) {
+    var addedMissingAddress;
+
+    if ( entry.gsx$incorrectamazonpermalink.$t == "No Address" ) {
+      addedMissingAddress = " no-address";
+    }
+    return addedMissingAddress;
 }
