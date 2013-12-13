@@ -2,11 +2,11 @@ $(function(){
 
 // Just get some rough data
   var wishLists = $("#wish_list_container").children().length + 1;
-    console.log("number of wish lists:" + wishLists);
+    console.log("Number of wish lists:" + wishLists);
   var receivedGifts = $(".recipient").length + 1;
-    console.log("Received Gifts:" + receivedGifts);
+    console.log("Number of Recipients:" + receivedGifts);
   var sentGifts = $(".santa").length + 1;
-    console.log("Sent Gifts:" + sentGifts);
+    console.log("Number of Secret Santas:" + sentGifts);
 
   $('.carousel').carousel({
     interval: 8000,
@@ -141,11 +141,11 @@ function getGiftStatus(entry) {
       iconString += '<img src="./assets/img/ss-ico.png" title="gave a gift!" /> ';
     }
 
-    if ( entry.gsx$giftreceivedorgiftincoming.$t == "Received" ) { // they were marked as having received a gift
+    if ( entry.gsx$giftreceivedorgiftincoming.$t === "Received" ) { // they were marked as having received a gift
       iconString += '<img src="./assets/img/present.png" class="recipient" title="got a gift!" /> ';
     }
 
-    if ( entry.gsx$giftreceivedorgiftincoming.$t == "Incoming" ) { // they were marked as having an incoming gift
+    if ( entry.gsx$giftreceivedorgiftincoming.$t === "Incoming" ) { // they were marked as having an incoming gift
       iconString += '<img src="./assets/img/present-incoming.png" class="recipient" title="incoming gift!" /> ';
     }
 
@@ -155,11 +155,11 @@ function getGiftStatus(entry) {
 function badAmazon(entry) {
     var iconBadAmazon = ' <span class="no-address pull-right">';
 
-    if ( entry.gsx$incorrectamazonpermalink.$t == "No Address" ) { // has an incorrect Amazon link
+    if ( entry.gsx$incorrectamazonpermalink.$t === "No Address" ) { // has an incorrect Amazon link
       iconBadAmazon += '<img src="./assets/img/ss-missing-shipping.png" title="Missing Shipping address!" /> ';
     }
 
-    if ( entry.gsx$incorrectamazonpermalink.$t == "Bad Link" ) { // has an incorrect Amazon link
+    if ( entry.gsx$incorrectamazonpermalink.$t === "Bad Link" ) { // has an incorrect Amazon link
       iconBadAmazon += '<img src="./assets/img/ss-bad-amazon-link.png" title="Incorrect Amazon Link!" /> ';
     }
 
@@ -187,7 +187,7 @@ function getSanta(entry) {
 function getBadAmazon(entry) {
     var addedBadAmazon;
 
-    if ( entry.gsx$incorrectamazonpermalink.$t == "Bad Link" ) {
+    if ( entry.gsx$incorrectamazonpermalink.$t === "Bad Link" ) {
       addedBadAmazon = " bad-link";
     }
     return addedBadAmazon;
@@ -196,7 +196,7 @@ function getBadAmazon(entry) {
 function getMissingAddress(entry) {
     var addedMissingAddress;
 
-    if ( entry.gsx$incorrectamazonpermalink.$t == "No Address" ) {
+    if ( entry.gsx$incorrectamazonpermalink.$t === "No Address" ) {
       addedMissingAddress = " no-address";
     }
     return addedMissingAddress;
